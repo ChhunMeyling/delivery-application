@@ -8,7 +8,7 @@ package foodordering;
      }
      @Override
      public String getDetails() {
-         return "Drink Item: " + name + "\n" +
+         return "\n[+] Drink Item: " + name + "\n" +
                  "Price: $" + price + "\n" +
                  "Description: " + description + "\n" +
                  "Size: " + size;

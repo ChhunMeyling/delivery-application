@@ -1,9 +1,12 @@
 package foodordering;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant {
+    @Getter
     private List<MenuItem> menu;
     private List<Order> orders;
 

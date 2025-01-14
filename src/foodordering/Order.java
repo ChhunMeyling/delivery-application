@@ -21,9 +21,11 @@ class Order {
         this.status="Pending";
     }
     public void addItem(MenuItem menu_item){
+
         items.add(menu_item);
     }
     public void removeItem(MenuItem menu_item){
+
         items.remove(menu_item);
     }
     public double calculateTotal(){
@@ -35,7 +37,32 @@ class Order {
 
     }
     public void updateStatus(String new_status){
+
         this.status=new_status;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public MenuItem getItem(int index) {
+        if (index >= 0 && index < items.size()) {
+            return items.get(index);
+        } else {
+            return null;
+        }
+    }
+    public List<MenuItem> getItems() {
+        return items;
+    }
+
+
+    public String getDetails() {
+        StringBuilder details = new StringBuilder();
+        details.append("Items:\n");
+        for (MenuItem item : items) {
+            details.append(item.getDetails()).append("\n");
+        }
+        details.append("Status: ").append(status);
+        return details.toString();
     }
 
 
